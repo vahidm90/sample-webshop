@@ -18,5 +18,5 @@ export const USERS = [
         id: 4,
         name: 'user4',
         password: 'user4P@ss'
-    },
+    }
 ];
