@@ -1,4 +1,3 @@
-import "./product-categories.component.scss"
 import {useState} from "react";
 import CategoryCatalog from "../../product/components/category-catalog.component";
 
