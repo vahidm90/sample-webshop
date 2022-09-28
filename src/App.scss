@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+
+  .grid-container {
+    display: grid;
+  }
+
+  .wrap-grid {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  @media (max-width: 568px) {
+    .wrap-grid {
+      grid-template-columns: 1fr;
+
+      .primary-sidebar {
+        grid-row: 1;
+      }
+    }
+  }
+}
+
+
