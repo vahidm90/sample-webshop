@@ -6,7 +6,7 @@ function ProductThumbnail({product, stock, onOrder}) {
         e.stopPropagation();
         e.preventDefault();
         if (stock > 0)
-            onOrder({[product.id]: stock - 1});
+            onOrder(product.id);
     }
 
     return (

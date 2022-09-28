@@ -1,7 +1,7 @@
 import {useState} from "react";
 import CategoryCatalog from "../../product/components/category-catalog.component";
 
-function ProductCategories({categories, inventory, onInventoryUpdate}) {
+function ProductCategories({categories, inventory, onProductOrder}) {
     const [openCategory, setOpenCategory] = useState(null);
 
     function handleExtendButtonClick(e, categoryId) {
@@ -25,7 +25,7 @@ function ProductCategories({categories, inventory, onInventoryUpdate}) {
             </div>
             <div className="flex-container">{openCategory &&
                 <CategoryCatalog categoryId={openCategory} inventory={inventory}
-                                 onInventoryUpdate={onInventoryUpdate}/>}
+                                 onProductOrder={onProductOrder}/>}
             </div>
         </>
     );
