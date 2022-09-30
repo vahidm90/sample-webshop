@@ -1,14 +1,19 @@
 import './App.scss';
-import UserSidebar from "./features/user/components/user-sidebar.component";
 import ShopWindow from "./features/shop/components/shop-window.component";
 import {CATEGORIES} from "./fake-data/categories.data";
 import {PRODUCTS} from "./fake-data/products.data";
 import {useReducer} from "react";
 import {cartReducer} from "./features/cart/utils/cart-reducer.util";
 import {inventoryReducer} from "./features/shop/utils/inventory-reducer.util";
+import AuthProvider from "./features/auth/components/auth-provider.component";
+import {Route, Routes} from "react-router-dom";
+import RequireAuth from "./features/auth/components/require-auth.component";
+import Checkout from "./features/order/component/checkout";
+import UserThumbnail from "./features/user/components/user-thumbnail.component";
+import PrimarySidebar from "./features/shop/components/primary-sidebar.component";
 
 function App() {
-    const products = PRODUCTS.filter(product => product.showInShopWindow);
+
     const [cartItems, setCartItems] = useReducer(cartReducer, undefined, () => []);
     const [inventory, setInventory] = useReducer(inventoryReducer, undefined, () => {
         const inventoryMap = {};
@@ -23,6 +28,7 @@ function App() {
 
     function handleChangeInCart(type, item) {
         if (type === 'increment' && !inventory[item.id])
+            // todo: maybe show a toast that order quantity is exceeding inventory size
             return;
         if (type === 'remove')
             updateInventory('add', item.id, item.count);
@@ -41,19 +47,23 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>A Sample Web Shop!</h1>
-            </header>
-            <div className="grid-container wrap-grid">
-                <div className="shop-window">
-                    <ShopWindow categories={CATEGORIES} products={products} inventory={inventory}
-                                onProductOrder={handleProductOrderFromShopWindow}></ShopWindow>
+            <AuthProvider>
+                <header className="App-header">
+                    <h1>A Sample Web Shop!</h1>
+                    <UserThumbnail/>
+                </header>
+                <div className="grid-container wrap-grid">
+                    <Routes>
+                        <Route path="/checkout" element={<RequireAuth><Checkout/></RequireAuth>}/>
+                        <Route path="*" element={
+                            <ShopWindow categories={CATEGORIES}
+                                        products={PRODUCTS.filter(product => product.showInShopWindow)}
+                                        inventory={inventory} onProductOrder={handleProductOrderFromShopWindow}/>
+                        }/>
+                    </Routes>
+                    <PrimarySidebar cartItems={cartItems} onCartItemsChange={handleChangeInCart} />
                 </div>
-
-                <div className="primary-sidebar">
-                    {<UserSidebar cartItems={cartItems} onCartItemChange={handleChangeInCart} />}
-                </div>
-            </div>
+            </AuthProvider>
         </div>
     );
 }
