@@ -18,4 +18,26 @@ code {
 
 .flex-container {
   display: flex;
+  &.ai-center {
+    align-items: center;
+  }
+  &.fd-column {
+    flex-direction: column;
+  }
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.fw-400 {
+  font-weight: 400;
 }

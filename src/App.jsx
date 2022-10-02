@@ -46,11 +46,13 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className="App flex-container fd-column">
             <AuthProvider>
-                <header className="App-header">
-                    <h1>A Sample Web Shop!</h1>
-                    <UserThumbnail/>
+                <header className="app-header flex-container ai-center">
+                    <h1 className="p-1 m-0 fw-400">A Sample Web Shop!</h1>
+                    <div className="p-1 m-l-auto">
+                        <UserThumbnail/>
+                    </div>
                 </header>
                 <div className="grid-container wrap-grid">
                     <Routes>
