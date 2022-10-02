@@ -1,6 +1,7 @@
 export const PRODUCTS = [
     {
         id: 1,
+        price: 40,
         inventory: 3,
         productShortName: 'Product 1',
         productFullName: 'Product 1 - Product of Some Brand',
@@ -11,6 +12,7 @@ export const PRODUCTS = [
     },
     {
         id: 2,
+        price: 1,
         inventory: 3,
         productShortName: 'Product 2',
         productFullName: 'Product 2 - Product of Some Brand',
@@ -21,6 +23,7 @@ export const PRODUCTS = [
     },
     {
         id: 3,
+        price: 2,
         inventory: 3,
         productShortName: 'Product 3',
         productFullName: 'Product 3 - Product of Some Brand',
@@ -31,6 +34,7 @@ export const PRODUCTS = [
     },
     {
         id: 4,
+        price: 3,
         inventory: 3,
         productShortName: 'Product 4',
         productFullName: 'Product 4 - Product of Some Brand',
@@ -41,6 +45,7 @@ export const PRODUCTS = [
     },
     {
         id: 5,
+        price: 4,
         inventory: 3,
         productShortName: 'Product 5',
         productFullName: 'Product 5 - Product of Some Brand',
@@ -51,6 +56,7 @@ export const PRODUCTS = [
     },
     {
         id: 6,
+        price: 5,
         inventory: 3,
         productShortName: 'Product 6',
         productFullName: 'Product 6 - Product of Some Brand',
@@ -61,6 +67,7 @@ export const PRODUCTS = [
     },
     {
         id: 7,
+        price: 6,
         inventory: 3,
         productShortName: 'Product 7',
         productFullName: 'Product 7 - Product of Some Brand',
@@ -71,6 +78,7 @@ export const PRODUCTS = [
     },
     {
         id: 8,
+        price: 7,
         inventory: 3,
         productShortName: 'Product 8',
         productFullName: 'Product 8 - Product of Some Brand',
@@ -81,6 +89,7 @@ export const PRODUCTS = [
     },
     {
         id: 9,
+        price: 8,
         inventory: 3,
         productShortName: 'Product 9',
         productFullName: 'Product 9 - Product of Some Brand',
@@ -91,6 +100,7 @@ export const PRODUCTS = [
     },
     {
         id: 10,
+        price: 9,
         inventory: 3,
         productShortName: 'Product 10',
         productFullName: 'Product 10 - Product of Some Brand',
@@ -101,6 +111,7 @@ export const PRODUCTS = [
     },
     {
         id: 11,
+        price: 10,
         inventory: 7,
         productShortName: 'Product 11',
         productFullName: 'Product 11 - Product of Some Brand',
@@ -111,6 +122,7 @@ export const PRODUCTS = [
     },
     {
         id: 12,
+        price: 11,
         inventory: 7,
         productShortName: 'Product 12',
         productFullName: 'Product 12 - Product of Some Brand',
@@ -121,6 +133,7 @@ export const PRODUCTS = [
     },
     {
         id: 13,
+        price: 12,
         inventory: 7,
         productShortName: 'Product 13',
         productFullName: 'Product 13 - Product of Some Brand',
@@ -131,6 +144,7 @@ export const PRODUCTS = [
     },
     {
         id: 14,
+        price: 13,
         inventory: 7,
         productShortName: 'Product 14',
         productFullName: 'Product 14 - Product of Some Brand',
@@ -141,6 +155,7 @@ export const PRODUCTS = [
     },
     {
         id: 15,
+        price: 14,
         inventory: 7,
         productShortName: 'Product 15',
         productFullName: 'Product 15 - Product of Some Brand',
@@ -151,6 +166,7 @@ export const PRODUCTS = [
     },
     {
         id: 16,
+        price: 15,
         inventory: 7,
         productShortName: 'Product 16',
         productFullName: 'Product 16 - Product of Some Brand',
@@ -161,6 +177,7 @@ export const PRODUCTS = [
     },
     {
         id: 17,
+        price: 16,
         inventory: 3,
         productShortName: 'Product 17',
         productFullName: 'Product 17 - Product of Some Brand',
@@ -171,6 +188,7 @@ export const PRODUCTS = [
     },
     {
         id: 18,
+        price: 17,
         inventory: 3,
         productShortName: 'Product 18',
         productFullName: 'Product 18 - Product of Some Brand',
@@ -181,6 +199,7 @@ export const PRODUCTS = [
     },
     {
         id: 19,
+        price: 118,
         inventory: 3,
         productShortName: 'Product 19',
         productFullName: 'Product 19 - Product of Some Brand',
@@ -191,6 +210,7 @@ export const PRODUCTS = [
     },
     {
         id: 20,
+        price: 119,
         inventory: 3,
         productShortName: 'Product 20',
         productFullName: 'Product 20 - Product of Some Brand',
@@ -201,6 +221,7 @@ export const PRODUCTS = [
     },
     {
         id: 21,
+        price: 120,
         inventory: 10,
         productShortName: 'Product 21',
         productFullName: 'Product 21 - Product of Some Brand',
@@ -211,6 +232,7 @@ export const PRODUCTS = [
     },
     {
         id: 22,
+        price: 121,
         inventory: 10,
         productShortName: 'Product 22',
         productFullName: 'Product 22 - Product of Some Brand',
@@ -221,6 +243,7 @@ export const PRODUCTS = [
     },
     {
         id: 23,
+        price: 122,
         inventory: 10,
         productShortName: 'Product 23',
         productFullName: 'Product 23 - Product of Some Brand',
@@ -231,6 +254,7 @@ export const PRODUCTS = [
     },
     {
         id: 24,
+        price: 123,
         inventory: 10,
         productShortName: 'Product 24',
         productFullName: 'Product 24 - Product of Some Brand',
@@ -241,6 +265,7 @@ export const PRODUCTS = [
     },
     {
         id: 25,
+        price: 124,
         inventory: 3,
         productShortName: 'Product 25',
         productFullName: 'Product 25 - Product of Some Brand',
@@ -251,6 +276,7 @@ export const PRODUCTS = [
     },
     {
         id: 26,
+        price: 125,
         inventory: 3,
         productShortName: 'Product 26',
         productFullName: 'Product 26 - Product of Some Brand',
@@ -261,6 +287,7 @@ export const PRODUCTS = [
     },
     {
         id: 27,
+        price: 126,
         inventory: 3,
         productShortName: 'Product 27',
         productFullName: 'Product 27 - Product of Some Brand',
@@ -271,6 +298,7 @@ export const PRODUCTS = [
     },
     {
         id: 28,
+        price: 127,
         inventory: 1,
         productShortName: 'Product 28',
         productFullName: 'Product 28 - Product of Some Brand',
@@ -281,6 +309,7 @@ export const PRODUCTS = [
     },
     {
         id: 29,
+        price: 128,
         inventory: 1,
         productShortName: 'Product 29',
         productFullName: 'Product 29 - Product of Some Brand',
@@ -291,6 +320,7 @@ export const PRODUCTS = [
     },
     {
         id: 30,
+        price: 129,
         inventory: 1,
         productShortName: 'Product 30',
         productFullName: 'Product 30 - Product of Some Brand',
@@ -301,6 +331,7 @@ export const PRODUCTS = [
     },
     {
         id: 31,
+        price: 130,
         inventory: 1,
         productShortName: 'Product 31',
         productFullName: 'Product 31 - Product of Some Brand',
@@ -311,6 +342,7 @@ export const PRODUCTS = [
     },
     {
         id: 32,
+        price: 131,
         inventory: 3,
         productShortName: 'Product 32',
         productFullName: 'Product 32 - Product of Some Brand',
@@ -321,6 +353,7 @@ export const PRODUCTS = [
     },
     {
         id: 33,
+        price: 132,
         inventory: 3,
         productShortName: 'Product 33',
         productFullName: 'Product 33 - Product of Some Brand',
@@ -331,6 +364,7 @@ export const PRODUCTS = [
     },
     {
         id: 34,
+        price: 133,
         inventory: 0,
         productShortName: 'Product 34',
         productFullName: 'Product 34 - Product of Some Brand',
@@ -341,6 +375,7 @@ export const PRODUCTS = [
     },
     {
         id: 35,
+        price: 134,
         inventory: 0,
         productShortName: 'Product 35',
         productFullName: 'Product 35 - Product of Some Brand',
@@ -351,6 +386,7 @@ export const PRODUCTS = [
     },
     {
         id: 36,
+        price: 135,
         inventory: 0,
         productShortName: 'Product 36',
         productFullName: 'Product 36 - Product of Some Brand',
@@ -361,6 +397,7 @@ export const PRODUCTS = [
     },
     {
         id: 37,
+        price: 360,
         inventory: 0,
         productShortName: 'Product 37',
         productFullName: 'Product 37 - Product of Some Brand',
@@ -371,6 +408,7 @@ export const PRODUCTS = [
     },
     {
         id: 38,
+        price: 370,
         inventory: 0,
         productShortName: 'Product 38',
         productFullName: 'Product 38 - Product of Some Brand',
@@ -381,6 +419,7 @@ export const PRODUCTS = [
     },
     {
         id: 39,
+        price: 380,
         inventory: 0,
         productShortName: 'Product 39',
         productFullName: 'Product 39 - Product of Some Brand',
@@ -391,6 +430,7 @@ export const PRODUCTS = [
     },
     {
         id: 40,
+        price: 390,
         inventory: 3,
         productShortName: 'Product 40',
         productFullName: 'Product 40 - Product of Some Brand',
