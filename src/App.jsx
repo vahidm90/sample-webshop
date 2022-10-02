@@ -54,7 +54,13 @@ function App() {
                 </header>
                 <div className="grid-container wrap-grid">
                     <Routes>
-                        <Route path="/checkout" element={<RequireAuth><Checkout/></RequireAuth>}/>
+                        <Route path="/checkout" element={
+                            <RequireAuth>
+                                <div className="p-1">
+                                    <Checkout cartItems={cartItems} onCartItemsChange={handleChangeInCart}/>
+                                </div>
+                            </RequireAuth>
+                        }/>
                         <Route path="*" element={
                             <ShopWindow categories={CATEGORIES}
                                         products={PRODUCTS.filter(product => product.showInShopWindow)}
