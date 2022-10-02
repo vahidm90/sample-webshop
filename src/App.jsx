@@ -1,16 +1,12 @@
 import './App.scss';
-import ShopWindow from "./features/shop/components/shop-window.component";
-import {CATEGORIES} from "./fake-data/categories.data";
 import {PRODUCTS} from "./fake-data/products.data";
 import {useReducer} from "react";
 import {cartReducer} from "./features/cart/utils/cart-reducer.util";
 import {inventoryReducer} from "./features/shop/utils/inventory-reducer.util";
 import AuthProvider from "./features/auth/components/auth-provider.component";
-import {Route, Routes} from "react-router-dom";
-import RequireAuth from "./features/auth/components/require-auth.component";
-import Checkout from "./features/order/component/checkout";
-import UserThumbnail from "./features/user/components/user-thumbnail.component";
-import PrimarySidebar from "./features/shop/components/primary-sidebar.component";
+import PrimarySidebar from "./features/layout/components/primary-sidebar.component";
+import TopBar from "./features/layout/components/top-bar.component";
+import MainBody from "./features/layout/components/main-body.component";
 
 function App() {
 
@@ -48,28 +44,12 @@ function App() {
     return (
         <div className="App flex-container fd-column">
             <AuthProvider>
-                <header className="app-header flex-container ai-center">
-                    <h1 className="p-1 m-0 fw-400">A Sample Web Shop!</h1>
-                    <div className="p-1 m-l-auto">
-                        <UserThumbnail/>
-                    </div>
-                </header>
+                <TopBar/>
                 <div className="grid-container wrap-grid">
-                    <Routes>
-                        <Route path="/checkout" element={
-                            <RequireAuth>
-                                <div className="p-1">
-                                    <Checkout cartItems={cartItems} onCartItemsChange={handleChangeInCart}/>
-                                </div>
-                            </RequireAuth>
-                        }/>
-                        <Route path="*" element={
-                            <ShopWindow categories={CATEGORIES}
-                                        products={PRODUCTS.filter(product => product.showInShopWindow)}
-                                        inventory={inventory} onProductOrder={handleProductOrderFromShopWindow}/>
-                        }/>
-                    </Routes>
-                    <PrimarySidebar cartItems={cartItems} onCartItemsChange={handleChangeInCart} />
+                    <MainBody inventory={inventory} cartItems={cartItems}
+                              onCartItemsChange={handleChangeInCart}
+                              onOrderFromShopWindow={handleProductOrderFromShopWindow}/>
+                    <PrimarySidebar cartItems={cartItems} onCartItemsChange={handleChangeInCart}/>
                 </div>
             </AuthProvider>
         </div>
